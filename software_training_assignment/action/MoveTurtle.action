@@ -1,0 +1,8 @@
+#goal definition
+float32 waypoint_x
+---
+#result definition
+float32 time
+---
+#feedback 
+float32 distance_to_goal
