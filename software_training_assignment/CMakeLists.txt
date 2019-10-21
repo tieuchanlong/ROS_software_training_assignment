@@ -50,11 +50,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+   FILES
+   TurtleDistance.msg
+ )
 
 ## Generate services in the 'srv' folder
  add_service_files(
@@ -219,3 +218,6 @@ add_executable(turtle_tf_distance src/turtle_tf_distance.cpp)
 target_link_libraries(turtle_tf_distance ${catkin_LIBRARIES})
 add_dependencies(turtle_tf_distance software_training_assignment_gencpp)
 
+add_executable(turtle_tf_reset src/turtle_tf_reset.cpp)
+target_link_libraries(turtle_tf_reset ${catkin_LIBRARIES})
+add_dependencies(turtle_tf_reset software_training_assignment_gencpp)
